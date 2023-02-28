@@ -1,0 +1,13 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="主流程.启动app.appium" />
+          <option value="主流程.打开app.appium" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
