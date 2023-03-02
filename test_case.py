@@ -5,6 +5,8 @@
 import unittest, time
 import os
 from plugins import HTMLTestRunner
+from plugins.HTMLTestRunner import HTMLTestRunner
+
 
 class TestDemo(unittest.TestCase):
 
@@ -30,10 +32,12 @@ if __name__ == '__main__':
     suite.addTest(TestDemo('test_02'))
     suite.addTest(TestDemo('test_03'))
     # 定义测试报告
-    runner = HTMLTestRunner.HTMLTestRunner(title='自动化测试报告',
+    runner: HTMLTestRunner = HTMLTestRunner.HTMLTestRunner(title='自动化测试报告',
                                           description='用例执行情况：',
                                           stream=open(report_path + '\\' + now + ' HTMLReport.html', 'wb'),
                                           verbosity=2
                                           )
+
     # 运行测试用例
     runner.run(suite)
+
