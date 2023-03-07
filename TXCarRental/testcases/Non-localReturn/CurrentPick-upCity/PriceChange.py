@@ -4,7 +4,6 @@
 
 from time import sleep
 from appium import webdriver
-from appium.webdriver.common.appiumby import AppiumBy
 
 # For W3C actions
 

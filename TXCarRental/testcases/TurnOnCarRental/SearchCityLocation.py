@@ -4,7 +4,6 @@
 
 from appium import webdriver
 from appium.webdriver.common.appiumby import AppiumBy
-from appium.webdriver.webdriver import WebDriver
 import os
 from time import sleep
 

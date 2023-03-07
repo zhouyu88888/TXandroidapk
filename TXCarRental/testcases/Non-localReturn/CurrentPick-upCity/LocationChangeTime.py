@@ -4,12 +4,6 @@
 
 from appium import webdriver
 from appium.webdriver.common.appiumby import AppiumBy
-from appium.webdriver.webdriver import WebDriver
-from unittest import result
-import click
-import calendar
-import tkinter as tk
-from tkinter import ttk
 import os
 from time import sleep
 
