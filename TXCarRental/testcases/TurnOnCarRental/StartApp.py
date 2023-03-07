@@ -6,7 +6,7 @@
 # pip install Appium-Python-Client
 # Then you can paste this into a file and simply run with Python
 
-from appium import webdriver
+import appium
 import os
 from appium.webdriver.common.appiumby import AppiumBy
 from time import sleep
@@ -30,7 +30,7 @@ caps["appium:nativeWebScreenshot"] = True
 caps["appium:newCommandTimeout"] = 6000
 caps["appium:connectHardwareKeyboard"] = True
 
-driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
+driver = appium.webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
 
 # 或者用下面的配置参数
 desired_caps = {

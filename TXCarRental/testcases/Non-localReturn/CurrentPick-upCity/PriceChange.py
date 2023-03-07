@@ -3,7 +3,7 @@
 # author:周宇 time:2023/2/20.
 
 from time import sleep
-from appium import webdriver
+import appium
 
 # For W3C actions
 
@@ -20,7 +20,7 @@ caps["appium:nativeWebScreenshot"] = True
 caps["appium:newCommandTimeout"] = 6000
 caps["appium:connectHardwareKeyboard"] = True
 
-driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
+driver = appium.webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
 
 # 车辆选择页/下单页不操作、悬停15mins不操作页面，出价格变化提示弹窗
 # Accessibility-点击重新加载，刷新数据
