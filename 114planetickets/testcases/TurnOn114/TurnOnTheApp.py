@@ -6,6 +6,8 @@
 # pip install Appium-Python-Client
 # Then you can paste this into a file and simply run with Python
 
+import sys
+sys.path.append("/usr/local/lib/python3.6/site-packages")
 import appium
 from appium.webdriver.common.appiumby import AppiumBy
 from time import sleep
