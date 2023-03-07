@@ -6,6 +6,11 @@
 # pip install Appium-Python-Client
 # Then you can paste this into a file and simply run with Python
 
+import sys
+sys.path.append('D:\devTools\python\Lib')
+sys.path.append('D:\appautomation\TXandroidapk\TXCarRental\venv\Lib')
+print(sys.path)
+
 import appium
 from appium.webdriver.common.appiumby import AppiumBy
 from time import sleep
