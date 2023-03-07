@@ -6,13 +6,10 @@
 # pip install Appium-Python-Client
 # Then you can paste this into a file and simply run with Python
 
-import os
-import sys
-dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append("/usr/local/lib/python3.6/site-packages")
 import appium
 from appium.webdriver.common.appiumby import AppiumBy
 from time import sleep
+import os
 
 # For W3C actions
 # cmd命令清缓存进app
