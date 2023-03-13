@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-# author:周宇 time:2023/2/17.
+# author:周宇 time:2023/3/13.
 
 # This sample code uses the Appium python client v2
 # pip install Appium-Python-Client
@@ -43,10 +43,10 @@ desired_caps = {
 }
 #driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
 
-#设置缺省等待时间
+# 设置缺省等待时间
 driver.implicitly_wait(10)
 
-#如果有协议弹窗，点击
+# 如果有协议弹窗，点击
 iknow = driver.find_elemen_by_id()
 if iknow:
     iknow.button()
@@ -55,12 +55,50 @@ if iknow:
 driver.find_element(AppiumBy.ID, "com.woyaou:id/tvAgree").click()
 sleep(5)
 
-#driver.quit()
+# 跳过红包,点击返回键
+driver.keyevent(4)
+sleep(3)
+driver.find_element(AppiumBy.ID, "com.woyaou:id/tvGuojiFlight").click()
+sleep(5)
 
-# find_element(by=AppiumBy.ID, value="et_account") , 点击 find_element方法查看源码，by=AppiumBy.ID，value是元素的 id名称
-# 搜索完后调用driver.quit()会直接退出app
-# input('**********')
-# 30秒钟之后退出程序
-#time.sleep(30)
-#搜索完后不会退出app
-# driver.quit()
+# 点击火车票tab
+driver.tap([(400, 380)])
+sleep(5)
+# 跳过优惠券
+driver.keyevent(4)
+sleep(5)
+
+# 点击汽车票tab
+driver.tap([(680, 380)])
+sleep(5)
+# 跳过优惠券
+driver.keyevent(4)
+sleep(5)
+
+# 点击酒店tab
+driver.tap([(939, 367)])
+sleep(5)
+# 跳过优惠券
+driver.keyevent(4)
+sleep(5)
+
+# 点击底部-目的地tab
+driver.tap([(400, 1818)])
+# ID-“温馨提示”弹窗，点击“确定”
+driver.find_element(AppiumBy.ID, "com.woyaou:id/btn_right").click()
+# ID-获取定位系统弹窗，点击“始终允许”
+driver.find_element(AppiumBy.ID, "android:id/button1").click()
+
+# ID-点击“去哪儿玩”
+driver.find_element(AppiumBy.ACCESSIBILITY_ID, "去哪儿玩").click()
+sleep(5)
+
+# 点击底部-订单中心tab
+driver.tap([(668, 1823)])
+sleep(5)
+
+# 点击底部-我的tab
+driver.tap([(945, 1810)])
+sleep(5)
+
+#driver.quit()

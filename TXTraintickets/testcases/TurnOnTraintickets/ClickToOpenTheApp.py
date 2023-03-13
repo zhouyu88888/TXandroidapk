@@ -37,8 +37,8 @@ desired_caps = {
     'platformName': 'Android',
     'platformVersion': '10',
     'deviceName': '',
-    'appPackage': 'com.tiexing.carrental',
-    'appActivity': 'com.woyaou.weex.newsdk.WeexPageActivity',
+    'appPackage': 'com.tiexing',
+    'appActivity': 'com.woyaou.mode.common.WelcomeActivity',
     'noReset': True
 }
 #driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
