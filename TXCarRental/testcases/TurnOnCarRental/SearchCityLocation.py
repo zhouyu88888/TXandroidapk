@@ -6,6 +6,7 @@ import appium
 from appium.webdriver.common.appiumby import AppiumBy
 import os
 from time import sleep
+# from appium.webdriver.common.keys import Keys
 
 # For W3C actions
 # cmd命令清缓存进app
@@ -59,8 +60,9 @@ driver.find_element(AppiumBy.ID, "com.tiexing.carrental:id/btn_right").click()
 # ID-获取定位系统弹窗，点击“始终允许”
 driver.find_element(AppiumBy.ID, "android:id/button1").click()
 
-# className-定位搜索框
-CLASS_NAME = "android.widget.EditText"
-driver.find_element(AppiumBy.CLASS_NAME).click()
+# 定位搜索框
+# driver.tap([(155, 252), (947, 367)]).clear()
+driver.tap([(155, 252), (947, 367)]).send_keys('邯郸')
+
 sleep(1)
 

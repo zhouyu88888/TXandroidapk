@@ -53,7 +53,7 @@ driver.find_element(AppiumBy.ID, "com.tiexing.carrental:id/tvAgree").click()
 sleep(7)
 
 # 点击异地还车按钮
-driver.tap([(871, 656), (986, 663)])
+driver.tap([(870, 551), (999, 618)])
 sleep(3)
 
 # Accessibility-取车城市点击“上海”
