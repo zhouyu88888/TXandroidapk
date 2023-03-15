@@ -6,7 +6,7 @@ import appium
 from appium.webdriver.common.appiumby import AppiumBy
 import os
 from time import sleep
-# from appium.webdriver.common.keys import Keys
+import keywords
 
 # For W3C actions
 # cmd命令清缓存进app
@@ -22,6 +22,8 @@ caps["appium:deviceName"] = "64f2dece"
 caps["appium:appPackage"] = "com.tiexing.carrental"
 caps["appium:appActivity"] = "com.woyaou.weex.newsdk.WeexPageActivity"
 caps["appium:noReset"] = "true"
+caps["unicodeKeyboard"] = "true"
+caps["resetKeyboard"] = "true"
 caps["appium:ensureWebviewsHavePages"] = True
 caps["appium:nativeWebScreenshot"] = True
 caps["appium:newCommandTimeout"] = 6000
@@ -62,7 +64,9 @@ driver.find_element(AppiumBy.ID, "android:id/button1").click()
 
 # 定位搜索框
 # driver.tap([(155, 252), (947, 367)]).clear()
-driver.tap([(155, 252), (947, 367)]).send_keys('邯郸')
-
+search = driver.tap([(155, 252), (947, 367)])
+search.keywords.send_keys("邯郸")
+# driver.tap([(155, 252), (947, 367)]).send_keys("邯郸")
+# driver.find_element_by_class("android.widget.EditText").send_keys("邯郸")
 sleep(1)
 

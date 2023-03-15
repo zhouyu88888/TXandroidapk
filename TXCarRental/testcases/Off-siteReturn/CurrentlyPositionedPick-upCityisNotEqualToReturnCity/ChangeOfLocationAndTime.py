@@ -165,7 +165,7 @@ sleep(3)
 driver.find_element(AppiumBy.ACCESSIBILITY_ID, "添加驾驶员信息").click()
 
 # 选择驾驶员页，点击选择某一个驾驶员
-driver.tap([(851, 585)])
+driver.tap([(57, 514), (935, 708)])
 sleep(3)
 
 # Accessibility-下单页点击“明细”
