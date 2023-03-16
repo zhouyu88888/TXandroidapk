@@ -10,6 +10,11 @@ import appium
 from appium.webdriver.common.appiumby import AppiumBy
 from time import sleep
 import os
+import sys
+
+sys.path.append(r"D:\devTools\jenkins\workspace\TXAndroidApps-UiAutomationIntegration")
+sys.path.append(r"C:\Users\铁行\AppData\Roaming\Python\Python311\site-packages")
+sys.path.append(r"C:\Users\铁行\AppData\Local\Programs\Python\Python311\Lib\site-packages")
 
 # For W3C actions
 # cmd命令清缓存进app
@@ -41,7 +46,7 @@ desired_caps = {
     'appActivity': 'com.woyaou.mode.common.WelcomeActivity',
     'noReset': True
 }
-#driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
+# driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
 
 # 设置缺省等待时间
 driver.implicitly_wait(10)
