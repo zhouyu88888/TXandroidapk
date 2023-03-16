@@ -168,6 +168,14 @@ driver.find_element(AppiumBy.ACCESSIBILITY_ID, "添加驾驶员信息").click()
 driver.tap([(57, 514), (935, 708)])
 sleep(3)
 
+# 屏幕宽
+width = driver.get_window_size()['width']
+# 屏幕高
+height = driver.get_window_size()['heigth']
+
+# 屏幕从下向上滑动
+driver.swipe(width*0.5, height*0.9, width*0.5, height*0.1, 1000)
+
 # Accessibility-下单页点击“明细”
 driver.find_element(AppiumBy.ACCESSIBILITY_ID, "明细").click()
 
