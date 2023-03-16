@@ -177,7 +177,10 @@ sleep(3)
 
 # Accessibility-选择保险页点击“放弃优惠”
 driver.find_element(AppiumBy.ACCESSIBILITY_ID, "放弃优惠").click()
+
+# 等待跳转支付页
 sleep(10)
+
 
 
 
