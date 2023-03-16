@@ -189,7 +189,4 @@ driver.find_element(AppiumBy.ACCESSIBILITY_ID, "放弃优惠").click()
 # 等待跳转支付页
 sleep(10)
 
-
-
-
 # driver.quit()

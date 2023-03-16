@@ -41,7 +41,7 @@ desired_caps = {
     'appActivity': 'com.woyaou.mode.common.WelcomeActivity',
     'noReset': True
 }
-#driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
+# driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
 
 # 设置缺省等待时间
 driver.implicitly_wait(10)
@@ -55,12 +55,12 @@ if iknow:
 driver.find_element(AppiumBy.ID, "com.zhsl.air:id/tvAgree").click()
 sleep(5)
 
-#driver.quit()
+# driver.quit()
 
 # find_element(by=AppiumBy.ID, value="et_account") , 点击 find_element方法查看源码，by=AppiumBy.ID，value是元素的 id名称
 # 搜索完后调用driver.quit()会直接退出app
 # input('**********')
 # 30秒钟之后退出程序
-#time.sleep(30)
-#搜索完后不会退出app
+# time.sleep(30)
+# 搜索完后不会退出app
 # driver.quit()

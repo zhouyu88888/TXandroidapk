@@ -90,4 +90,4 @@ sleep(5)
 driver.tap([(939, 1824)])
 sleep(5)
 
-#driver.quit()
+# driver.quit()
