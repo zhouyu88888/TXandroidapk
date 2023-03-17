@@ -175,6 +175,14 @@ height = driver.get_window_size()['heigth']
 # 屏幕从下向上滑动
 driver.swipe(width*0.5, height*0.9, width*0.5, height*0.1, 1000)
 
+# 滑动到底部，点击门店政策详情
+# driver.find_element(AppiumBy.ACCESSIBILITY_ID, "门店政策详情").click()
+# driver.keyevent(4)
+
+# 滑动到底部，点击《用车服务协议》
+# driver.find_element(AppiumBy.ACCESSIBILITY_ID, "《用车服务协议》").click()
+# driver.keyevent(4)
+
 # Accessibility-下单页点击“明细”
 driver.find_element(AppiumBy.ACCESSIBILITY_ID, "明细").click()
 
