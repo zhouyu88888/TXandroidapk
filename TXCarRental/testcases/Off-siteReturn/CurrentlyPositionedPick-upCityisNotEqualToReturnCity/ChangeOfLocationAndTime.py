@@ -6,6 +6,11 @@ import appium
 from appium.webdriver.common.appiumby import AppiumBy
 import os
 from time import sleep
+import sys
+
+sys.path.append(r"D:\devTools\jenkins\workspace\TXAndroidApps-UiAutomationIntegration")
+sys.path.append(r"C:\Users\铁行\AppData\Roaming\Python\Python311\site-packages")
+sys.path.append(r"C:\Users\铁行\AppData\Local\Programs\Python\Python311\Lib\site-packages")
 
 # For W3C actions
 
