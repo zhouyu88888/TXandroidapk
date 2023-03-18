@@ -100,16 +100,17 @@ driver.find_element(AppiumBy.XPATH, "//*[contains(@content-desc, '月')]").click
 
 # Accessibility/Xpath-选取日历具体取车/还车日期
 driver.find_element(AppiumBy.ACCESSIBILITY_ID, "取车时间").click()
+sleep(3)
 # 坐标点击日期1
-driver.tap([(660, 1242), (712, 1292)])
-sleep(3)
-driver.find_element(AppiumBy.ACCESSIBILITY_ID, "取车时间").click()
+driver.tap([(811, 1209), (863, 1259)])
+sleep(5)
+# driver.find_element(AppiumBy.ACCESSIBILITY_ID, "取车时间").click()
 # 坐标点击日期2
-driver.tap([(811, 1242), (863, 1292)])
-sleep(3)
+driver.tap([(962, 1242), (1014, 1292)])
+sleep(5)
 # driver.find_element(AppiumBy.ACCESSIBILITY_ID, "重置").click()
 driver.find_element(AppiumBy.ACCESSIBILITY_ID, "确定时间").click()
-
+sleep(3)
 # Accessibility-首页点击立即选车
 driver.find_element(AppiumBy.ACCESSIBILITY_ID, "立即选车").click()
 
