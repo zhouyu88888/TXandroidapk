@@ -46,7 +46,7 @@ desired_caps = {
     'appActivity': 'com.woyaou.weex.newsdk.WeexPageActivity',
     'noReset': True
 }
-#driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
+# driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
 
 # 设置缺省等待时间
 driver.implicitly_wait(10)
@@ -59,7 +59,6 @@ if iknow:
 # ID-首次安装/清缓存进入弹窗协议，点击同意
 driver.find_element(AppiumBy.ID, "com.tiexing.carrental:id/tvAgree").click()
 sleep(5)
-
 
 # driver.quit()
 

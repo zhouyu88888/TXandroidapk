@@ -46,7 +46,7 @@ desired_caps = {
     'appActivity': 'com.woyaou.weex.newsdk.WeexPageActivity',
     'noReset': True
 }
-#driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
+# driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
 
 # 设置缺省等待时间
 driver.implicitly_wait(10)

@@ -83,7 +83,6 @@ driver.find_element(AppiumBy.XPATH, "//*[contains(@content-desc, '月')]").click
 # print(x)
 # print(y)
 
-
 # 屏幕向上滑动, x轴不变，y轴向上移动
 # def swipeup(driver, n=1, t=500):
 #    L = driver.get_window_size()
