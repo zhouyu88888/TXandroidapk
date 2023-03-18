@@ -27,7 +27,7 @@ caps["appium:connectHardwareKeyboard"] = True
 
 driver = appium.webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
 
-# 车辆选择页/下单页不操作、悬停15mins不操作页面，出价格变化提示弹窗
+# 车辆选择页/下单页不操作、悬停15分钟不操作页面，出价格变化提示弹窗
 # Accessibility-点击重新加载，刷新数据
 # driver.find_element(AppiumBy.ACCESSIBILITY_ID, "重新加载").click()
 # sleep(3)
