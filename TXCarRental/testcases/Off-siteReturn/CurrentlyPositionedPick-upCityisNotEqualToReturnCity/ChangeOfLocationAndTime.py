@@ -154,9 +154,8 @@ sleep(3)
 
 # Accessibility-检查页面元素：登录页勾选协议
 # driver.find_element(AppiumBy.ACCESSIBILITY_ID, "com.tiexing.carrental:id/shanyan_view_privacy_checkbox").click()
-driver.tap([(138, 1578)])
+driver.tap([(105, 1561), (156, 1612)])
 sleep(3)
-
 # Accessibility-检查页面元素：本机号码一键登录
 # driver.find_element(AppiumBy.ACCESSIBILITY_ID, "com.tiexing.carrental:id/shanyan_view_bt_one_key_login").click()
 driver.tap([(508, 1390)])
@@ -166,20 +165,25 @@ sleep(3)
 driver.tap([(1067, 579)])
 sleep(3)
 
+# Accessibility-下单页，非免押提示弹窗，点击“我知道了”
+driver.find_element(AppiumBy.ACCESSIBILITY_ID, "我知道了").click()
+sleep(3)
+
 # Accessibility-下单页，用车人信息，点击“添加驾驶员信息”
 driver.find_element(AppiumBy.ACCESSIBILITY_ID, "添加驾驶员信息").click()
+sleep(3)
 
 # 选择驾驶员页，点击选择某一个驾驶员
-driver.tap([(57, 514), (935, 708)])
+driver.tap([(57, 514), (111, 708)])
 sleep(3)
 
 # 屏幕宽
-width = driver.get_window_size()['width']
+# width = driver.get_window_size()['width']
 # 屏幕高
-height = driver.get_window_size()['heigth']
+# height = driver.get_window_size()['heigth']
 
 # 屏幕从下向上滑动
-driver.swipe(width*0.5, height*0.9, width*0.5, height*0.1, 1000)
+# driver.swipe(width*0.5, height*0.9, width*0.5, height*0.1, 1000)
 
 # 滑动到底部，点击门店政策详情
 # driver.find_element(AppiumBy.ACCESSIBILITY_ID, "门店政策详情").click()
