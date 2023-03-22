@@ -63,14 +63,33 @@ sleep(5)
 # 点击免押租车tab
 driver.tap([(188, 488)])
 sleep(5)
+# 点击送车上门、芝麻信用免押金
+driver.find_element(AppiumBy.ACCESSIBILITY_ID, "送车上门").click()
+sleep(1)
+driver.find_element(AppiumBy.ACCESSIBILITY_ID, "芝麻免押金说明").click()
+sleep(3)
+driver.find_element(AppiumBy.ACCESSIBILITY_ID, "立即免押租车").click()
+sleep(3)
+# 点击异地还车按钮
+driver.tap([(866, 696), (995, 763)])
+sleep(3)
 
 # 点击机票tab
 driver.tap([(458, 498)])
 sleep(5)
+# 点击带儿童、带婴儿、目的地置换
+driver.find_element(AppiumBy.ID, "com.zhsl.air:id/ckbChild").click()
+driver.find_element(AppiumBy.ID, "com.zhsl.air:id/ckbBaby").click()
+driver.find_element(AppiumBy.ID, "com.zhsl.air:id/btn_swapStation").click()
+sleep(3)
 
 # 点击火车票tab
 driver.tap([(690, 495)])
 sleep(5)
+driver.find_element(AppiumBy.ID, "com.zhsl.air:id/only_gd_zh").click()
+driver.find_element(AppiumBy.ID, "com.zhsl.air:id/only_student_zh").click()
+driver.find_element(AppiumBy.ID, "com.zhsl.air:id/btn_swapStation").click()
+sleep(3)
 
 # 点击汽车票tab
 driver.tap([(915, 501)])
@@ -83,5 +102,69 @@ sleep(5)
 # 点击我的tab
 driver.tap([(898, 1813)])
 sleep(5)
+# 点击登录/注册账号
+driver.tap([(333, 312)])
+sleep(3)
+
+# Accessibility-检查页面元素：登录页勾选协议
+# driver.find_element(AppiumBy.ACCESSIBILITY_ID, "com.tiexing.carrental:id/shanyan_view_privacy_checkbox").click()
+driver.tap([(105, 1561), (156, 1612)])
+sleep(3)
+
+# Accessibility-检查页面元素：本机号码一键登录
+# driver.find_element(AppiumBy.ACCESSIBILITY_ID, "com.tiexing.carrental:id/shanyan_view_bt_one_key_login").click()
+driver.tap([(508, 1390)])
+sleep(3)
+
+# 点击立即提现入口
+driver.tap([(857, 525)])
+sleep(3)
+# 点击立即提现按钮
+driver.find_element(AppiumBy.ACCESSIBILITY_ID, "立即提现").click()
+# 提现弹窗点击确认提现按钮
+driver.find_element(AppiumBy.ACCESSIBILITY_ID, "确认提现").click()
+sleep(3)
+driver.keyevent(4)
+# 提现页面返回我的页面
+sleep(1)
+driver.keyevent(4)
+
+# 我的页面-点击租车订单入口
+driver.tap([(150, 729)])
+sleep(3)
+driver.keyevent(4)
+sleep(1)
+# 我的页面-点击飞机票订单入口
+driver.tap([(398, 736)])
+sleep(3)
+driver.keyevent(4)
+sleep(1)
+# 我的页面-点击火车票订单入口
+driver.tap([(665, 717)])
+sleep(3)
+driver.keyevent(4)
+sleep(1)
+# 我的页面-点击汽车票订单入口
+driver.tap([(930, 717)])
+sleep(3)
+driver.keyevent(4)
+sleep(1)
+
+# 我的页面-点击隐私政策
+driver.tap([(188, 1017), (997, 1078)])
+sleep(3)
+driver.keyevent(4)
+sleep(1)
+# 我的页面-点击建议反馈
+driver.tap([(188, 1207), (997, 1268)])
+sleep(3)
+driver.keyevent(4)
+sleep(1)
+# 我的页面-点击关于我们
+driver.tap([(188, 1397), (997, 1458)])
+sleep(3)
+driver.keyevent(4)
+sleep(1)
 
 # driver.quit()
+
