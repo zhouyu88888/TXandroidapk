@@ -63,6 +63,13 @@ sleep(5)
 # 跳过红包,点击返回键
 driver.keyevent(4)
 sleep(3)
+
+# 首页机票tab，国内-点击携带儿童、携带婴儿
+driver.find_element(AppiumBy.ID, "com.woyaou:id/ckbChild").click()
+driver.find_element(AppiumBy.ID, "com.woyaou:id/ckbBaby").click()
+sleep(5)
+
+# 首页机票tab，点击国际/港澳台
 driver.find_element(AppiumBy.ID, "com.woyaou:id/tvGuojiFlight").click()
 sleep(5)
 
@@ -71,6 +78,10 @@ driver.tap([(400, 380)])
 sleep(5)
 # 跳过优惠券
 driver.keyevent(4)
+sleep(5)
+# 点击学生票、高铁动车
+driver.find_element(AppiumBy.ID, "com.woyaou:id/only_student").click()
+driver.find_element(AppiumBy.ID, "com.woyaou:id/only_gd").click()
 sleep(5)
 
 # 点击汽车票tab
@@ -101,9 +112,64 @@ sleep(5)
 # 点击底部-订单中心tab
 driver.tap([(668, 1823)])
 sleep(5)
+# 订单中心点击飞机票
+driver.tap([(72, 389), (198, 446)])
+sleep(1)
+driver.keyevent(4)
+sleep(1)
+# 点击火车票
+driver.tap([(342, 389), (468, 446)])
+sleep(1)
+driver.keyevent(4)
+sleep(1)
+# 点击汽车票
+driver.tap([(612, 389), (738, 446)])
+sleep(1)
+driver.keyevent(4)
+sleep(1)
+# 点击酒店
+driver.tap([(903, 389), (987, 446)])
+sleep(1)
+driver.keyevent(4)
+sleep(1)
+# 点击专车订单
+driver.tap([(150, 699), (672, 760)])
+sleep(1)
+driver.keyevent(4)
+sleep(1)
+# 点击租车订单
+driver.tap([(150, 850), (996, 911)])
+sleep(1)
+driver.keyevent(4)
+sleep(1)
+# 点击门票订单
+driver.tap([(150, 1002), (996, 1063)])
+sleep(1)
+driver.keyevent(4)
+sleep(1)
+
+# 点击“客服”图标
+driver.find_element(AppiumBy.ID, "com.woyaou:id/ivKefu").click()
+sleep(1)
+driver.keyevent(4)
+sleep(1)
 
 # 点击底部-我的tab
 driver.tap([(945, 1810)])
 sleep(5)
+
+# 点击“登录/注册账号”
+driver.find_element(AppiumBy.ID, "com.woyaou:id/tv_account").click()
+sleep(1)
+
+# Accessibility-检查页面元素：登录页勾选协议
+# driver.find_element(AppiumBy.ACCESSIBILITY_ID, "com.tiexing.carrental:id/shanyan_view_privacy_checkbox").click()
+driver.tap([(105, 1561), (156, 1612)])
+sleep(3)
+
+# Accessibility-检查页面元素：本机号码一键登录
+# driver.find_element(AppiumBy.ACCESSIBILITY_ID, "com.tiexing.carrental:id/shanyan_view_bt_one_key_login").click()
+driver.tap([(508, 1390)])
+sleep(3)
 
 # driver.quit()
