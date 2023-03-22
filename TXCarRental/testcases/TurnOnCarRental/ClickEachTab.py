@@ -60,6 +60,10 @@ if iknow:
 driver.find_element(AppiumBy.ID, "com.tiexing.carrental:id/tvAgree").click()
 sleep(8)
 
+# Accessibility-首页，点击“送车上门”
+driver.find_element(AppiumBy.ACCESSIBILITY_ID, "送车上门").click()
+sleep(3)
+
 # Accessibility-首页，点击“芝麻信用免押金”，落地页点击“立即免押租车”并返回
 driver.find_element(AppiumBy.ACCESSIBILITY_ID, "芝麻信用免押金").click()
 sleep(3)
