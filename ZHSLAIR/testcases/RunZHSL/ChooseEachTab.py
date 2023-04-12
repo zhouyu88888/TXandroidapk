@@ -105,26 +105,27 @@ sleep(5)
 # 点击登录/注册账号
 driver.tap([(333, 312)])
 sleep(3)
+driver.keyevent(4)
 
 # Accessibility-检查页面元素：登录页勾选协议
 # driver.find_element(AppiumBy.ACCESSIBILITY_ID, "com.tiexing.carrental:id/shanyan_view_privacy_checkbox").click()
-driver.tap([(105, 1561), (156, 1612)])
-sleep(3)
+# driver.tap([(105, 1561), (156, 1612)])
+# sleep(3)
 
 # Accessibility-检查页面元素：本机号码一键登录
 # driver.find_element(AppiumBy.ACCESSIBILITY_ID, "com.tiexing.carrental:id/shanyan_view_bt_one_key_login").click()
-driver.tap([(508, 1390)])
-sleep(3)
+# driver.tap([(508, 1390)])
+# sleep(3)
 
 # 点击立即提现入口
 driver.tap([(857, 525)])
 sleep(3)
 # 点击立即提现按钮
-driver.find_element(AppiumBy.ACCESSIBILITY_ID, "立即提现").click()
+# driver.find_element(AppiumBy.ACCESSIBILITY_ID, "立即提现").click()
 # 提现弹窗点击确认提现按钮
-driver.find_element(AppiumBy.ACCESSIBILITY_ID, "确认提现").click()
-sleep(3)
-driver.keyevent(4)
+# driver.find_element(AppiumBy.ACCESSIBILITY_ID, "确认提现").click()
+# sleep(3)
+# driver.keyevent(4)
 # 提现页面返回我的页面
 sleep(1)
 driver.keyevent(4)
