@@ -110,6 +110,7 @@ sleep(5)
 
 # 点击底部-优惠券tab
 driver.tap([(407, 1827)])
+sleep(5)
 
 # 点击底部-客服tab
 driver.tap([(670, 1813)])
