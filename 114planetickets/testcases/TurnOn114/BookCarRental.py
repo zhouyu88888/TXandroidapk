@@ -125,16 +125,24 @@ driver.find_element(AppiumBy.ACCESSIBILITY_ID, "筛选").click()
 driver.find_element(AppiumBy.ACCESSIBILITY_ID, "确定").click()
 
 # Accessibility-检查页面元素：车辆选择页点击“SUV”
-driver.find_element(AppiumBy.ACCESSIBILITY_ID, "SUV").click()
-sleep(3)
+# driver.find_element(AppiumBy.ACCESSIBILITY_ID, "SUV").click()
+# sleep(3)
 
 # 车辆列表坐标点击资源1
-driver.tap([(1067, 579)])
-sleep(3)
+# driver.tap([(1067, 579)])
+# sleep(3)
 
 # 车辆详情坐标点击资源1
 # driver.tap([(992, 712)])
 # sleep(3)
+
+# 车辆列表含报价
+driver.find_element(AppiumBy.XPATH, "//*[contains(@content-desc, '个报价')]").click()
+sleep(3)
+
+# 车辆详情点击
+driver.find_element(AppiumBy.XPATH, "//*[contains(@content-desc, '/天')]").click()
+sleep(3)
 
 # Accessibility-检查页面元素：登录页勾选协议
 # driver.find_element(AppiumBy.ACCESSIBILITY_ID, "com.tiexing.carrental:id/shanyan_view_privacy_checkbox").click()
