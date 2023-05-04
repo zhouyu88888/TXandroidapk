@@ -67,14 +67,30 @@ sleep(3)
 # Accessibility-首页，点击“芝麻信用免押金”，落地页点击“立即免押租车”并返回
 driver.find_element(AppiumBy.ACCESSIBILITY_ID, "芝麻信用免押金").click()
 sleep(3)
+# 获取屏幕宽度
+width = driver.get_window_size()['width']
+
+# 获取屏幕高度
+height = driver.get_window_size()['height']
+
+# 利用 "swipe" 实现滑动, 屏幕从下向上滑动
+driver.swipe(width*0.5, height*0.9, width*0.5, height*0.1, 1000)
+sleep(1)
+
 driver.find_element(AppiumBy.ACCESSIBILITY_ID, "立即免押租车").click()
 sleep(1)
 
 # 点击“安心租”
-# driver.tap([(279, 1443)])
-# sleep(3)
-# driver.tap([(57, 131)])
-# sleep(5)
+driver.tap([(279, 1443)])
+sleep(3)
+
+# 利用 "swipe" 实现滑动, 屏幕从下向上滑动
+driver.swipe(width*0.5, height*0.9, width*0.5, height*0.1, 1000)
+driver.swipe(width*0.5, height*0.9, width*0.5, height*0.1, 1000)
+sleep(1)
+
+driver.tap([(811, 1820)])
+sleep(5)
 
 # 点击“企业用车”
 # driver.tap([(797, 1285)])

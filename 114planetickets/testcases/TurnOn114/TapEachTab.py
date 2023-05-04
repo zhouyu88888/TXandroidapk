@@ -100,12 +100,6 @@ sleep(3)
 driver.keyevent(4)
 sleep(3)
 
-# 获取屏幕宽度
-width = driver.get_window_size()['width']
-
-# 获取屏幕高度
-height = driver.get_window_size()['height']
-
 # 利用 "swipe" 实现滑动, 屏幕从下向上滑动
 driver.swipe(width*0.5, height*0.9, width*0.5, height*0.1, 1000)
 sleep(1)
@@ -132,12 +126,6 @@ sleep(3)
 driver.find_element(AppiumBy.ID, "com.woyaou:id/btn_swapStation").click()
 sleep(3)
 
-# 获取屏幕宽度
-width = driver.get_window_size()['width']
-
-# 获取屏幕高度
-height = driver.get_window_size()['height']
-
 # 利用 "swipe" 实现滑动, 屏幕从下向上滑动
 driver.swipe(width*0.5, height*0.9, width*0.5, height*0.1, 1000)
 sleep(1)
@@ -158,12 +146,6 @@ sleep(3)
 # 点击送车上门
 driver.tap([(954, 1340), (994, 1380)])
 sleep(3)
-
-# 获取屏幕宽度
-width = driver.get_window_size()['width']
-
-# 获取屏幕高度
-height = driver.get_window_size()['height']
 
 # 利用 "swipe" 实现滑动, 屏幕从下向上滑动
 driver.swipe(width*0.5, height*0.9, width*0.5, height*0.1, 1000)
