@@ -96,7 +96,6 @@ sleep(3)
 # 点击火车票tab
 driver.tap([(471, 478)])
 sleep(3)
-
 # 跳过优惠券
 driver.keyevent(4)
 sleep(3)
